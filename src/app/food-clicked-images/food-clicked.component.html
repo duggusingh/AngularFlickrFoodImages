@@ -1,0 +1,49 @@
+<div class="card food-item" style="width: 1300px;">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="food-content">
+        <a  class="btn btn-danger" style="color: white;" (click)=" goBack()">Go to Main Page</a>
+      </div>
+    <div class="col-sm-12">
+      <div class="food-content">
+        <h3>{{chosenFood.title._content}}</h3>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="food-image">
+        <img class="card-img-top" [src]="gettingLink()" alt="Showing Image ">
+      </div>
+    </div>
+  </div>
+  <div class="card-body food-content" >
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 style="color:rgb(7, 61, 56);">RealName of Owner: </h4>
+        <p>{{chosenFood.owner.realname}}</p>
+      </div>
+      <div class="col-sm-12">
+        <h4 style="color:rgb(7, 61, 56);">Date Taken: </h4>
+        <p>{{chosenFood.dates.taken | date}}</p>
+      </div>
+      <div class="col-sm-12">
+        <h4 style="color:rgb(7, 61, 56);">Description :</h4>
+        <p>{{chosenFood.description._content}}</p>
+      </div>
+      <div class="col-sm-12">
+        <h3 style="color:rgb(7, 61, 56);">Review Form:</h3>
+      </div>
+      <div class="col-sm-12">
+        <ngx-stars [size]="1" (ratingOutput)="forRating($event)" [maxStars]="10" [color]="'dodgerblue'" [initialStars]="initialStars"></ngx-stars>
+      </div>
+      <div class="col-sm-6">
+        <label style="color:rgb(7, 61, 56); font-weight: bold;" for="reviewText"> Reason For Rating </label>
+        <textarea class="form-control " placeholder="Write your reason for Rating" name="reviewText" [(ngModel)]="rate.reviewText" rows="5"></textarea>
+      </div>
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-danger review-btn" (click)="submit()" name="button"> Submit Reason </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="snackbar">
+</div>

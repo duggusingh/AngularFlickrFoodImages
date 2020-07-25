@@ -1,0 +1,32 @@
+
+
+
+.food-item {
+  width:50%;
+  height:50%;
+  margin:20px auto;
+}
+
+.food-image {
+  width:500px;
+  height:350px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.food-image img {
+  /* display: block;
+   max-width:100%;
+   max-height:180px;
+   width: auto;
+   height: auto; */
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+.food-content {
+  margin:15px;
+}
+

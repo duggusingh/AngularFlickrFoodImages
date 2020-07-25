@@ -1,0 +1,36 @@
+<div class="col-sm-12">
+  <div style="text-align: center;">
+    <p> Showing Images for Page  {{pageNumber}}</p>
+  </div>
+</div>
+<div class="row">
+  
+
+  <div class="col-sm-12">
+    <div style="margin:15px;">
+      <div  *ngIf="pageNumber!=1">
+        <a  class="btn btn-danger" (click)="pageNumber=pageNumber-1; gettingFoodImages()" style="float: left;color: white;"> Click to Back </a>
+      </div>
+      <div >
+        <a  class="btn btn-danger" (click)="pageNumber=pageNumber+1; gettingFoodImages()"  style="float: right;color: white;">Click to Next </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2 list" *ngFor="let food of foodList">
+      <div class=" item">
+        <a href="javascript:void(0);" (click)="foodSelected(food)">
+          <div class="image">
+            <img class=" hoverable" [src]="gettingLink(food)" alt="Image not found">
+          </div>
+          <div class=" content">
+            <div class="row">
+              <div class="col-sm-12">
+                <ngx-stars  [readonly]="true"  [color]="'dodgerblue'" [size]="1" [maxStars]="10" [initialStars]="checkAlreadyReviewed(food.id)"></ngx-stars>
+              </div>
+            </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+</div>

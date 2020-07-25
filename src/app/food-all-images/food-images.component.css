@@ -1,0 +1,41 @@
+
+
+
+.list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.item {
+  width:500px;
+  height:300px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.image {
+  
+  height:240px;
+}
+
+.image img {
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+.bottom {
+  margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
