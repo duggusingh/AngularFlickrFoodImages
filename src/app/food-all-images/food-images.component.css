@@ -28,6 +28,11 @@
 .bottom {
   margin-bottom: 0px;
 }
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -msbox-sizing: border-box;
+}
 
 
 

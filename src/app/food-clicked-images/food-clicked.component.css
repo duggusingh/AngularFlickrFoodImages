@@ -8,8 +8,7 @@
 }
 
 .food-image {
-  width:500px;
-  height:350px;
+  
   display: flex;
   justify-content: center;
   text-align: center;
@@ -30,3 +29,8 @@
   margin:15px;
 }
 
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -msbox-sizing: border-box;
+}
